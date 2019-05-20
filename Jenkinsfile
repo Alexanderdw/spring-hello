@@ -1,10 +1,10 @@
 pipeline {
   agent any
   environment {
-    dockerhub_username = '<dockerhub_username>'
+    dockerhub_username = 'murdocker'
     img_name = 'spring-hello'
     img_tag = sh (returnStdout: true, script: 'git log -1 --pretty=%h').trim()
-    username = '<username>'
+    username = 'user1'
   }
   stages {
     stage('Build') {
